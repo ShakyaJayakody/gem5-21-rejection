@@ -41,6 +41,8 @@
 #ifndef __GEM5_ASM_GENERIC_M5OPS_H__
 #define __GEM5_ASM_GENERIC_M5OPS_H__
 
+#include <gem5/asm/generic/m5op_flags.h>
+
 #define M5OP_ARM                0x00
 #define M5OP_QUIESCE            0x01
 #define M5OP_QUIESCE_NS         0x02
@@ -83,6 +85,12 @@
 
 #define M5OP_FOREACH                                            \
     M5OP(m5_arm, M5OP_ARM)                                      \
+    M5OP(m5_reserved2, M5OP_ANNOTATE);                       \
+    M5OP(m5_reserved2, M5OP_RESERVED2);                      \
+    M5OP(m5_reserved3, M5OP_RESERVED3);                      \
+    M5OP(m5_reserved4, M5OP_RESERVED4);                      \
+    M5OP(m5_reserved5, M5OP_RESERVED5);                      \
+
     M5OP(m5_quiesce, M5OP_QUIESCE)                              \
     M5OP(m5_quiesce_ns, M5OP_QUIESCE_NS)                        \
     M5OP(m5_quiesce_cycle, M5OP_QUIESCE_CYCLE)                  \
